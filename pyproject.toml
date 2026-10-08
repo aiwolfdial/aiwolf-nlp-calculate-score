@@ -1,0 +1,37 @@
+[project]
+name = "aiwolf-nlp-calculate-score"
+version = "1.0.0"
+description = "Calculate team-level game scores from AIWolf NLP competition logs"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+keywords = ["aiwolf"]
+authors = [{ name = "aiwolfdial", email = "aiwolf@kanolab.net" }]
+maintainers = [{ name = "aiwolfdial", email = "aiwolf@kanolab.net" }]
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "pyyaml>=6.0",
+]
+
+[project.urls]
+Homepage = "https://aiwolfdial.github.io/aiwolf-nlp/"
+
+[project.scripts]
+aiwolf-nlp-calculate-score = "aiwolf_nlp_calculate_score.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.12.1"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aiwolf_nlp_calculate_score"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "W"]

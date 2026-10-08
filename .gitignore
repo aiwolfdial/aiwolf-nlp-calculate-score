@@ -1,0 +1,18 @@
+# 大会ログと集計結果 (リポジトリには載せない)
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+.nfs*
